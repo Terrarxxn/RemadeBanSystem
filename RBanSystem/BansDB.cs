@@ -15,7 +15,7 @@ namespace BanSystem
         public BansDB(IDbConnection connection)
         {
             dbConnection = connection;
-            SqlTable table = new SqlTable("PollyxBans", new SqlColumn[]
+            SqlTable table = new SqlTable("RemadeBanSystem", new SqlColumn[]
             {
                 new SqlColumn("VictimAccount", MySqlDbType.String),
                 new SqlColumn("VictimUUID", MySqlDbType.String),
@@ -61,7 +61,7 @@ namespace BanSystem
         }
         public IEnumerable<BanInformation> GetBans()
         {
-            string command = "SELECT * FROM Bans;";
+            string command = "SELECT * FROM RemadeBanSystem;";
             QueryResult result = dbConnection.QueryReader(command);
             while (result.Read())
                 yield return new BanInformation(
@@ -74,7 +74,7 @@ namespace BanSystem
         }
         public BanInformation GetBan(string victim)
         {
-            string command = "SELECT * FROM Bans WHERE VictimAccount=@0;";
+            string command = "SELECT * FROM RemadeBanSystem WHERE VictimAccount=@0;";
             QueryResult result = dbConnection.QueryReader(command, victim);
             while (result.Read())
             {
@@ -94,7 +94,7 @@ namespace BanSystem
         }
         public BanInformation GetBanByUUID(string uuid)
         {
-            string command = "SELECT * FROM Bans WHERE VictimUUID=@0;";
+            string command = "SELECT * FROM RemadeBanSystem WHERE VictimUUID=@0;";
             QueryResult result = dbConnection.QueryReader(command, uuid);
             while (result.Read())
             {
@@ -114,7 +114,7 @@ namespace BanSystem
         }
         public BanInformation GetBanByIP(string ip)
         {
-            string command = "SELECT * FROM Bans WHERE VictimIP=@0;";
+            string command = "SELECT * FROM RemadeBanSystem WHERE VictimIP=@0;";
             QueryResult result = dbConnection.QueryReader(command, ip);
             while (result.Read())
             {
@@ -134,27 +134,27 @@ namespace BanSystem
         }
         public void BanPlayer(TSPlayer victim, int seconds, TSPlayer administrator, string reason = "-")
         {
-            string command = "INSERT INTO Bans (VictimAccount, VictimUUID, VictimIP, BanTime, Administrator, Reason) VALUES (@0, @1, @2, @3, @4, @5);";
+            string command = "INSERT INTO RemadeBanSystem (VictimAccount, VictimUUID, VictimIP, BanTime, Administrator, Reason) VALUES (@0, @1, @2, @3, @4, @5);";
             dbConnection.Query(command, victim.Account.Name, victim.UUID, victim.IP, DateTime.UtcNow.AddSeconds(seconds).ToString(), administrator.Account.Name, reason);
         }
         public void InsertPlayer(string victim, string UUID, string IP, int seconds, TSPlayer administrator, string reason = "-")
         {
-            string command = "INSERT INTO Bans (VictimAccount, VictimUUID, VictimIP, BanTime, Administrator, Reason) VALUES (@0, @1, @2, @3, @4, @5);";
+            string command = "INSERT INTO RemadeBanSystem (VictimAccount, VictimUUID, VictimIP, BanTime, Administrator, Reason) VALUES (@0, @1, @2, @3, @4, @5);";
             dbConnection.Query(command, victim, UUID, IP, DateTime.UtcNow.AddSeconds(seconds).ToString(), administrator.Account.Name, reason);
         }
         public void UnbanPlayerByAccount(string victim)
         {
-            string command = "DELETE FROM Bans WHERE VictimAccount=@0;";
+            string command = "DELETE FROM RemadeBanSystem WHERE VictimAccount=@0;";
             dbConnection.Query(command, victim);
         }
         public void UnbanPlayerByUUID(string uuid)
         {
-            string command = "DELETE FROM Bans WHERE VictimUUID=@0;";
+            string command = "DELETE FROM RemadeBanSystem WHERE VictimUUID=@0;";
             dbConnection.Query(command, uuid);
         }
         public void UnbanPlayerByIP(string ip)
         {
-            string command = "DELETE FROM Bans WHERE VictimIP=@0;";
+            string command = "DELETE FROM RemadeBanSystem WHERE VictimIP=@0;";
             dbConnection.Query(command, ip);
         }
     }
