@@ -11,8 +11,6 @@ C:\Users\bat627\source\repos\BanSystem\PollyxBans\obj\Debug\BanSystem.csproj.Cop
 C:\Users\bat627\source\repos\BanSystem\PollyxBans\obj\Debug\PollyxBans.dll
 C:\Users\bat627\source\repos\BanSystem\PollyxBans\obj\Debug\PollyxBans.pdb
 C:\Users\bat627\source\repos\BanSystem\PollyxBans\obj\Debug\BanSystem.csproj.AssemblyReference.cache
-C:\Users\bat627\source\repos\RBanSystem\RBanSystem\bin\Debug\PollyxBans.dll
-C:\Users\bat627\source\repos\RBanSystem\RBanSystem\bin\Debug\PollyxBans.pdb
 C:\Users\bat627\source\repos\RBanSystem\RBanSystem\bin\Debug\Mono.Data.Sqlite.dll
 C:\Users\bat627\source\repos\RBanSystem\RBanSystem\bin\Debug\MySql.Data.dll
 C:\Users\bat627\source\repos\RBanSystem\RBanSystem\bin\Debug\Newtonsoft.Json.dll
@@ -22,5 +20,7 @@ C:\Users\bat627\source\repos\RBanSystem\RBanSystem\bin\Debug\TShockAPI.dll
 C:\Users\bat627\source\repos\RBanSystem\RBanSystem\obj\Debug\BanSystem.csproj.AssemblyReference.cache
 C:\Users\bat627\source\repos\RBanSystem\RBanSystem\obj\Debug\BanSystem.csproj.CoreCompileInputs.cache
 C:\Users\bat627\source\repos\RBanSystem\RBanSystem\obj\Debug\BanSystem.csproj.CopyComplete
-C:\Users\bat627\source\repos\RBanSystem\RBanSystem\obj\Debug\PollyxBans.dll
-C:\Users\bat627\source\repos\RBanSystem\RBanSystem\obj\Debug\PollyxBans.pdb
+C:\Users\bat627\source\repos\RBanSystem\RBanSystem\bin\Debug\RBanSystem.dll
+C:\Users\bat627\source\repos\RBanSystem\RBanSystem\bin\Debug\RBanSystem.pdb
+C:\Users\bat627\source\repos\RBanSystem\RBanSystem\obj\Debug\RBanSystem.dll
+C:\Users\bat627\source\repos\RBanSystem\RBanSystem\obj\Debug\RBanSystem.pdb
